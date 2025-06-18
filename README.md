@@ -162,21 +162,29 @@ steps:
 ```
 ## How It Works
 
-- The script provides a menu-driven interface to perform various network reconnaissance tasks:
+The script provides a menu-driven interface to perform various network reconnaissance tasks:
 
-- **Port Scanning**: Uses Python `socket` with `ThreadPoolExecutor` for concurrent TCP connection scanning.
+- **Port Scanning**:  
+  Uses `socket` to establish TCP connections to specified ports.  
+  It leverages `concurrent.futures.ThreadPoolExecutor` for efficient concurrent scanning.
 
-- **Service Version Detection**: Sends protocol-specific probes (like HTTP GET) and parses responses.
+- **Service Version Detection**:  
+  Attempts to send protocol-specific probes (e.g., HTTP GET, SSH banner request) to open ports and parses the responses to identify the service and its version.  
+  `ssl` is used for HTTPS connections.
 
 - **Web Vulnerability Detection**:
-  - Checks HTTP headers for missing security policies.
-  - Looks for sensitive files (`robots.txt`, `.git/config`, etc.).
-  - Uses BeautifulSoup for basic XSS pattern detection in HTML content.
+  - Uses the `requests` library to fetch HTTP headers and checks for the presence or absence of key security headers.
+  - Performs `requests.get` calls for common sensitive file paths.
+  - `BeautifulSoup` is used to parse the HTML content for rudimentary XSS detection by searching for common script patterns.
 
-- **DNS Information Lookup**: Uses `dnspython` for querying DNS records and performs reverse DNS lookup via `socket.gethostbyaddr`.
+- **DNS Information Lookup**:  
+  Employs the `dnspython` library to query various DNS record types (`A`, `AAAA`, `CNAME`, `MX`, `NS`, `SOA`, `TXT`).  
+  It also performs reverse DNS lookups using `socket.gethostbyaddr`.
 
-- **Subdomain Enumeration**:
-  - **Brute-force**: Attempts resolving common subdomain names.
-  - **CRT.sh**: Retrieves subdomains listed in Certificate Transparency logs via HTTP requests.
+- **Subdomain Enumeration**:  
+  Combines two methods:
+  - **Brute-forcing**: Iterates through a predefined list of common subdomain prefixes and attempts to resolve their `A` records using `dnspython`.
+  - **CRT.sh Query**: Makes an HTTP request to `crt.sh`, a Certificate Transparency log search engine, to find subdomains mentioned in SSL/TLS certificates issued for the target domain.
 
-- **Output Management**: Results saved optionally in CSV format using Python’s `csv` module.
+- **Output Management**:  
+  All console output is captured and can be saved to a CSV file using the `csv` module, providing a persistent record of the scan results.
