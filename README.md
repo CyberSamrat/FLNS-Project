@@ -188,3 +188,17 @@ The script provides a menu-driven interface to perform various network reconnais
 
 - **Output Management**:  
   All console output is captured and can be saved to a CSV file using the `csv` module, providing a persistent record of the scan results.
+## Contributing
+
+Pull requests are welcome.  
+For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+This project is licensed under the **Apache License, Version 2.0**.  
+See the [LICENSE](LICENSE) file for details.
+
+---
+
+**Created by:** Samrat Sen & Team Sudo Knights  
+**LinkedIn:** [https://www.linkedin.com/in/samratsen007/](https://www.linkedin.com/in/samratsen007/)
