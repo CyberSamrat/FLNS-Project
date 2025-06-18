@@ -53,7 +53,7 @@ cd FLNS_Project
 ```
 2. Check if Python 3 is installed:
 ```bash
-python3 --version
+sudo python3 --version
 ```
 3. If Python 3 is not installed, install it via:
 ```bash
@@ -62,17 +62,17 @@ sudo apt-get install python3
 ```
 4. Install the required libraries:
 ```bash
-pip install requests beautifulsoup4 colorama dnspython
+sudo pip install requests beautifulsoup4 colorama dnspython
 ```
 
 ## Usage
 ```bash
-python3 flns.py
+sudo python3 flns.py
 ```
 
 ## Example
 ```yaml
-command: "python3 flns.py"
+command: "sudo python3 flns.py"
   banner: 
                    ______ _       _   _  _____
                   |  ____| |     | \ | |/ ____|
