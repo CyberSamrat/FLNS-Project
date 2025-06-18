@@ -72,20 +72,20 @@ python3 flns.py
 ##Example
 ```yaml
 command: "python3 flns.py"
-  banner: |
-    ______ _       _   _  _____
-   |  ____| |     | \ | |/ ____|
-   | |__  | |     |  \| | (___
-   |  __| | |     | . ` |\___ \
-   | |    | |____ | |\  |____) |
-   |_|    |______||_| \_|_____|
+  banner: 
+                   ______ _       _   _  _____
+                  |  ____| |     | \ | |/ ____|
+                  | |__  | |     |  \| | (___
+                  |  __| | |     | . ` |\___ \
+                  | |    | |____ | |\  |____) |
+                  |_|    |______||_| \_|_____/
 
-   Feather-Light Network Scanner (FLNS)
-   Version: 1.1
-   ----------------------------------------------------------
-   Created by: Samrat Sen & Team Sudo Knights
-   LinkedIn ID: https://www.linkedin.com/in/samratsen007/
-   ----------------------------------------------------------
+              Feather-Light Network Scanner (FLNS)
+                         Version: 1.1
+   |----------------------------------------------------------|
+   |       Created by: Samrat Sen & Team Sudo Knights         |
+   |  LinkedIn ID: https://www.linkedin.com/in/samratsen007/  |
+   |----------------------------------------------------------|
 steps:
   - prompt: "Enter IP address or domain name"
     input: "example.com"
