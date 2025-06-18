@@ -161,26 +161,22 @@ steps:
       saved_file: "flns_full_report.csv"
 ```
 ## How It Works
+
 - The script provides a menu-driven interface to perform various network reconnaissance tasks:
 
-- Port Scanning: Uses Python socket with ThreadPoolExecutor for concurrent TCP connection scanning.
+- **Port Scanning**: Uses Python `socket` with `ThreadPoolExecutor` for concurrent TCP connection scanning.
 
-- Service Version Detection: Sends protocol-specific probes (like HTTP GET) and parses responses.
+- **Service Version Detection**: Sends protocol-specific probes (like HTTP GET) and parses responses.
 
-- Web Vulnerability Detection:
+- **Web Vulnerability Detection**:
+  - Checks HTTP headers for missing security policies.
+  - Looks for sensitive files (`robots.txt`, `.git/config`, etc.).
+  - Uses BeautifulSoup for basic XSS pattern detection in HTML content.
 
-- Checks HTTP headers for missing security policies.
+- **DNS Information Lookup**: Uses `dnspython` for querying DNS records and performs reverse DNS lookup via `socket.gethostbyaddr`.
 
-- Looks for sensitive files (robots.txt, .git/config, etc.).
+- **Subdomain Enumeration**:
+  - **Brute-force**: Attempts resolving common subdomain names.
+  - **CRT.sh**: Retrieves subdomains listed in Certificate Transparency logs via HTTP requests.
 
-- Uses BeautifulSoup for basic XSS pattern detection in HTML content.
-
-- DNS Information Lookup: Uses dnspython for querying DNS records and performs reverse DNS lookup via socket.gethostbyaddr.
-
-- Subdomain Enumeration:
-
-- Brute-force: Attempts resolving common subdomain names.
-
-- CRT.sh: Retrieves subdomains listed in Certificate Transparency logs via HTTP requests.
-
-- Output Management: Results saved optionally in CSV format using Python’s csv module.
+- **Output Management**: Results saved optionally in CSV format using Python’s `csv` module.
