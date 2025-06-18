@@ -36,6 +36,9 @@ Suitable for cybersecurity students, penetration testers, and network administra
 ### Required Python Libraries:
 
 requests
+
 beautifulsoup4
+
 colorama
+
 dnspython
