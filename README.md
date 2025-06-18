@@ -64,3 +64,9 @@ sudo apt-get install python3
 ```bash
 pip install requests beautifulsoup4 colorama dnspython
 ```
+
+## Usage
+```bash
+python3 flns.py
+```
+
