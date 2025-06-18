@@ -35,13 +35,13 @@ Suitable for cybersecurity students, penetration testers, and network administra
 
 ### Required Python Libraries:
 
-requests : For making HTTP requests.
+**requests** :  For making HTTP requests.
 
-beautifulsoup4 : For parsing HTML content.
+**beautifulsoup4** :  For parsing HTML content.
 
-colorama : For colored console output.
+**colorama** :  For colored console output.
 
-dnspython : For advanced DNS queries.
+**dnspython** :  For advanced DNS queries.
 
 ## Installation
 
