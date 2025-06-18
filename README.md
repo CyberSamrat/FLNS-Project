@@ -50,6 +50,17 @@ Clone this repository:
 ```bash
 git clone https://github.com/CyberSamrat/FLNS_Project.git
 cd FLNS_Project
-
+```
 Check if Python 3 is installed:
+```bash
 python3 --version
+```
+If Python 3 is not installed, install it via:
+```bash
+sudo apt-get update
+sudo apt-get install python3
+```
+Install the required libraries:
+```bash
+pip install requests beautifulsoup4 colorama dnspython
+```
