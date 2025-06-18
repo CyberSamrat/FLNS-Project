@@ -69,7 +69,8 @@ pip install requests beautifulsoup4 colorama dnspython
 ```bash
 python3 flns.py
 ```
-##Example
+
+## Example
 ```yaml
 command: "python3 flns.py"
   banner: 
