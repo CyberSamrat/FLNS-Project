@@ -49,7 +49,7 @@ Suitable for cybersecurity students, penetration testers, and network administra
 
 ```bash
 git clone https://github.com/CyberSamrat/FLNS-Project.git
-cd FLNS_Project
+cd FLNS-Project
 ```
 2. Check if Python 3 is installed:
 ```bash
@@ -59,10 +59,6 @@ sudo python3 --version
 ```bash
 sudo apt-get update
 sudo apt-get install python3
-```
-4. Install the required libraries:
-```bash
-sudo pip install requests beautifulsoup4 colorama dnspython
 ```
 
 ## Usage
