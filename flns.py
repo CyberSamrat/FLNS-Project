@@ -39,7 +39,7 @@ def show_banner():
      {Fore.YELLOW}                                                                                              Feather-Light Network Scanner (FLNS)
                                                                                                                Version: 1.1
                                                                                        |----------------------------------------------------------|
-                                                                                       |  Created by: Samrat Sen & Team Sudo Knights              |
+                                                                                       |        Created by: Samrat Sen & Team Sudo Knights        |
                                                                                        |  LinkedIn ID: https://www.linkedin.com/in/samratsen007/  |
                                                                                        |----------------------------------------------------------|
 {Style.RESET_ALL}"""
