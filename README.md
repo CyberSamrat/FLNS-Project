@@ -31,7 +31,7 @@ Suitable for cybersecurity students, penetration testers, and network administra
 
 ## Requirements
 
-- **Python 3.x**  ( Python 3.8 or newer is recommended ).
+- **Python 3.x**  (Python 3.8 or newer is recommended).
 
 ### Required Python Libraries:
 
